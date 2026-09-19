@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm:front\" \"npm:mock\" \"npm:ai\"",
+    "front": "cd admin-front && npm run dev",
+    "mock": "cd admin-mock-backend && npm run start",
+    "ai": "cd admin-ai-backend && npm run start"
+  }
+}
