@@ -1,0 +1,22 @@
+node_modules/
+coverage/
+.DS_Store
+
+# 真实配置含 API Key / 同步令牌，绝不入库；提交模板 src/.env.example 即可
+.env
+src/.env
+
+# LanceDB 向量库为运行时生成物，由服务启动时的增量同步自动重建
+src/data/lancedb/
+# 增量同步清单，随向量库一同重建
+src/data/kb-manifest.json
+*.tmp
+
+# 日志
+*.log
+npm-debug.log*
+
+# Aider单元测试
+**/tests/
+# Aider全部缓存、历史文件
+.aider*

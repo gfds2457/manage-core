@@ -1,0 +1,34 @@
+@use "./comment.scss";
+
+::-webkit-scrollbar {
+  width: 10px;
+  /* 垂直滚动条宽度 */
+  height: 10px;
+  /* 水平滚动条高度 */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  /* 半透明背景，适配玻璃态 */
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  /* 毛玻璃效果 */
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(180deg,
+      #26307a 50%,
+    );
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: 0 0 12px rgba(79, 172, 254, 0.8);
+  /* hover 时发光增强 */
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+  /* 滚动条角落透明 */
+}

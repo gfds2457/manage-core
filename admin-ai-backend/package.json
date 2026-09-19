@@ -1,0 +1,41 @@
+{
+  "name": "admin-ai-backend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "从 admin-front/server 迁移出来的 AI 对话后端服务（Express + MySQL + 向量数据库 + MCP + 大模型）",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "node --watch src/bootstrap.js",
+    "start": "node src/bootstrap.js",
+    "kb:sync": "node src/embedding.js",
+    "kb:rebuild": "node src/embedding.js --full",
+    "kb:stats": "node src/embedding.js --stats",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "bin": {
+    "dev": "./src/index.js"
+  },
+  "dependencies": {
+    "@lancedb/lancedb": "^0.38.0",
+    "@langchain/core": "^1.2.11",
+    "@langchain/textsplitters": "^1.0.1",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "apache-arrow": "^18.1.0",
+    "axios": "^1.17.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "langchain": "^1.5.11",
+    "multer": "^2.2.0",
+    "mysql2": "^3.22.6",
+    "openai": "^6.45.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^5.0.1",
+    "vitest": "^5.0.1"
+  }
+}
