@@ -6,6 +6,8 @@
     "dev": "concurrently \"npm:front\" \"npm:mock\" \"npm:ai\"",
     "front": "cd admin-front && npm run dev",
     "mock": "cd admin-mock-backend && npm run start",
-    "ai": "cd admin-ai-backend && npm run start"
+    "ai": "cd admin-ai-backend && npm run start",
+    "build": "cd admin-mock-backend && npm ci && npm run build",
+    "start": "cd admin-mock-backend && node dist/index.js"
   }
 }
