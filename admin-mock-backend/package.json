@@ -4,9 +4,14 @@
   "version": "1.0.0",
   "type": "module",
   "description": "从 admin-front 迁移出来的 mock 接口独立后端（Express + CORS，内存态数据）",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "start": "tsx src/index.ts"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "start:dev": "tsx src/index.ts"
   },
   "dependencies": {
     "cors": "^2.8.6",
@@ -15,7 +20,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",
-    "@types/node": "^24.12.3",
+    "@types/node": "^24.13.6",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.0",
     "typescript": "~6.0.2"

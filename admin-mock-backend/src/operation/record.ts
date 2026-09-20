@@ -1,6 +1,6 @@
-import { isWriteSuccess } from "../kb/sync";
-import { OPERATION_RULES, resolveAction, resolveStatus } from "./rules";
-import type { OperationContext } from "./rules";
+import { isWriteSuccess } from "../kb/sync.js";
+import { OPERATION_RULES, resolveAction, resolveStatus } from "./rules.js";
+import type { OperationContext } from "./rules.js";
 
 /**
  * 操作日志的内存存储与写入。

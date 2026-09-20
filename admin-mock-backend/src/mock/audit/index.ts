@@ -1,6 +1,6 @@
-import { PERM } from "../../permission/codes";
-import type { MockItem } from "../../adapter";
-import { skuData } from "../sku";
+import { PERM } from "../../permission/codes.js";
+import type { MockItem } from "../../adapter.js";
+import { skuData } from "../sku/index.js";
 
 // 审核单状态：0 待审核 / 1 已通过 / 2 已驳回
 type AuditStatus = 0 | 1 | 2;

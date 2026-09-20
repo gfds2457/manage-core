@@ -1,8 +1,8 @@
-import type { MockItem } from "../adapter";
-import { findUserById } from "../mock/user/data";
-import type { User } from "../mock/user/data";
-import { hasPermission, resolvePermissions } from "./matrix";
-import { resolveUserId } from "./session";
+import type { MockItem } from "../adapter.js";
+import { findUserById } from "../mock/user/data.js";
+import type { User } from "../mock/user/data.js";
+import { hasPermission, resolvePermissions } from "./matrix.js";
+import { resolveUserId } from "./session.js";
 
 /** 鉴权通过后挂在 ctx 上的当前用户，比 User 多一份已解析的权限码 */
 export interface AuthedUser extends User

@@ -1,5 +1,5 @@
-import type { MockItem } from "../../adapter";
-import { readOperationLogs } from "../../operation/record";
+import type { MockItem } from "../../adapter.js";
+import { readOperationLogs } from "../../operation/record.js";
 
 export default [
   // 首页「最近操作日志」的数据源。

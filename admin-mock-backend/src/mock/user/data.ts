@@ -3,7 +3,7 @@
  *
  * 单独拆成 data 模块（而不是留在 user/index.ts 里）是为了打断循环依赖：
  * adapter 要做接口鉴权就得查「请求者是谁、什么角色」，若直接 import user/index.ts，
- * 而 user/index.ts 又 `import type { MockItem } from "../../adapter"`，两边就绕成了环。
+ * 而 user/index.ts 又 `import type { MockItem } from "../../adapter.js"`，两边就绕成了环。
  * 拆出纯数据后依赖方向变成单向：user/index.ts → data.ts ← permission/guard.ts。
  *
  * 表本身仍是模块级可变对象（增删改直接原地修改），与改造前行为一致。

@@ -1,7 +1,7 @@
 import type { Express, Request, Response } from "express";
-import { maybeSyncKnowledge } from "./kb/sync";
-import { maybeRecordOperation } from "./operation/record";
-import { checkAuth } from "./permission/guard";
+import { maybeSyncKnowledge } from "./kb/sync.js";
+import { maybeRecordOperation } from "./operation/record.js";
+import { checkAuth } from "./permission/guard.js";
 
 // 与 vite-plugin-mock 的 mock 项结构保持一致：
 // { url, method, response } 数组，原样复用 admin-front 迁移过来的 mock 模块

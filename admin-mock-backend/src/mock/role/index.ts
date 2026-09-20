@@ -1,5 +1,5 @@
-import type { MockItem } from "../../adapter";
-import { PERM } from "../../permission/codes";
+import type { MockItem } from "../../adapter.js";
+import { PERM } from "../../permission/codes.js";
 
 interface Role
 {
@@ -555,7 +555,7 @@ const mockResponseList: MockItem[] = [
     permission: PERM.PERMISSION_ROLE_WRITE,
     response: ( { query } ) =>
     {
-const current: number = Number( query?.current ) || 1;
+      const current: number = Number( query?.current ) || 1;
       const size: number = Number( query?.size ) || 5;
 
       const total: number = allRoles.length;
@@ -591,7 +591,7 @@ const current: number = Number( query?.current ) || 1;
     permission: PERM.PERMISSION_ROLE_WRITE,
     response: ( { body } ) =>
     {
-const { keyword = "" } = body as RoleSearchBody;
+      const { keyword = "" } = body as RoleSearchBody;
 
       const filteredList: Role[] = allRoles.filter( ( role ) =>
         role.roleName.includes( keyword ),
@@ -625,7 +625,7 @@ const { keyword = "" } = body as RoleSearchBody;
     response: ( { body } ) =>
     {
       // 校验 token
-const formData: RoleSaveOrUpdateBody = body as RoleSaveOrUpdateBody;
+      const formData: RoleSaveOrUpdateBody = body as RoleSaveOrUpdateBody;
       const { id, roleName } = formData;
 
       if ( !roleName )
@@ -682,7 +682,7 @@ const formData: RoleSaveOrUpdateBody = body as RoleSaveOrUpdateBody;
     permission: PERM.PERMISSION_ROLE_WRITE,
     response: ( { body } ) =>
     {
-const { ids: id } = body as RoleDeleteBody | number;
+      const { ids: id } = body as any;
 
       if ( !id || !Array.isArray( id ) || id.length === 0 )
       {
@@ -719,7 +719,7 @@ const { ids: id } = body as RoleDeleteBody | number;
     permission: PERM.PERMISSION_MENU_WRITE,
     response: () =>
     {
-return {
+      return {
         code: 200,
         message: "成功",
         data: addUpdateTimeById( allPermissions ),
@@ -734,7 +734,7 @@ return {
     permission: PERM.PERMISSION_ROLE_WRITE,
     response: ( { query } ) =>
     {
-const roleId: number = Number( query?.roleId );
+      const roleId: number = Number( query?.roleId );
       if ( !roleId )
       {
         return { code: 201, message: "角色ID不能为空" };
@@ -788,7 +788,7 @@ const roleId: number = Number( query?.roleId );
     permission: PERM.PERMISSION_ROLE_WRITE,
     response: ( { body } ) =>
     {
-const formData: UpdateRolePermissionBody =
+      const formData: UpdateRolePermissionBody =
         body as UpdateRolePermissionBody;
       const { roleId, permissionIds } = formData;
       if ( !roleId )
@@ -820,7 +820,7 @@ const formData: UpdateRolePermissionBody =
     permission: PERM.PERMISSION_MENU_WRITE,
     response: ( { body } ) =>
     {
-const formData: AddPermissionBody = body as AddPermissionBody;
+      const formData: AddPermissionBody = body as AddPermissionBody;
       const { name, pid, code, type } = formData;
       if ( !name || !code )
       {
@@ -879,7 +879,7 @@ const formData: AddPermissionBody = body as AddPermissionBody;
     permission: PERM.PERMISSION_MENU_WRITE,
     response: ( { body } ) =>
     {
-const formData: UpdatePermissionBody = body as UpdatePermissionBody;
+      const formData: UpdatePermissionBody = body as UpdatePermissionBody;
       const { id, name, code } = formData;
       if ( !id )
       {
@@ -927,7 +927,7 @@ const formData: UpdatePermissionBody = body as UpdatePermissionBody;
     permission: PERM.PERMISSION_MENU_WRITE,
     response: ( { body } ) =>
     {
-const formData: DeletePermissionBody = body as DeletePermissionBody;
+      const formData: DeletePermissionBody = body as DeletePermissionBody;
       const { id } = formData;
       if ( !id )
       {

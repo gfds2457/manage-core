@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
-import mocks from "./mock";
-import { registerMocks } from "./adapter";
+import mocks from "./mock/index.js";
+import { registerMocks } from "./adapter.js";
 
 const app = express();
 const PORT = Number( process.env.PORT ) || 3001;

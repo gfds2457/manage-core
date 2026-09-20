@@ -1,4 +1,4 @@
-import { PERM, WILDCARD } from "./codes";
+import { PERM, WILDCARD } from "./codes.js";
 
 /**
  * 角色 → 权限码矩阵。「谁能做什么」的唯一真源。

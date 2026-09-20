@@ -1,5 +1,5 @@
-import { PERM } from "../../permission/codes";
-import type { MockItem } from "../../adapter";
+import { PERM } from "../../permission/codes.js";
+import type { MockItem } from "../../adapter.js";
 // 模拟分类静态数据
 // 一级分类
 const level1List = [

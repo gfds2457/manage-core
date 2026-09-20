@@ -1,12 +1,12 @@
 // mock/index.ts
-import audit from "./audit";
-import brand from "./brand";
-import user from "./user";
-import spu from "./spu";
-import sku from "./sku";
-import role from "./role";
-import attribute from "./attribute";
-import log from "./log";
+import audit from "./audit/index.js";
+import brand from "./brand/index.js";
+import user from "./user/index.js";
+import spu from "./spu/index.js";
+import sku from "./sku/index.js";
+import role from "./role/index.js";
+import attribute from "./attribute/index.js";
+import log from "./log/index.js";
 
 // 导出所有 mock 接口，由 src/adapter.ts 注册成 Express 路由
 // 注意：数组顺序即路由注册顺序（先注册先匹配），不要随意调整模块顺序。

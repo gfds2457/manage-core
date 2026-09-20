@@ -1,5 +1,5 @@
-import { PERM } from "../../permission/codes";
-import type { MockItem } from "../../adapter";
+import { PERM } from "../../permission/codes.js";
+import type { MockItem } from "../../adapter.js";
 // sku全部数据
 // 导出给 audit 模块：上下架审核通过后需要把这里的 isSale 真正改掉
 export const skuData = [

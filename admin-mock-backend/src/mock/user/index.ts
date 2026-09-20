@@ -1,13 +1,13 @@
-import type { MockItem } from "../../adapter";
-import { PERM } from "../../permission/codes";
-import { issueToken } from "../../permission/session";
+import type { MockItem } from "../../adapter.js";
+import { PERM } from "../../permission/codes.js";
+import { issueToken } from "../../permission/session.js";
 import {
   allRoles,
   allUserList,
   findUserByCredentials,
   findUserIndexById,
-} from "./data";
-import type { User } from "./data";
+} from "./data.js";
+import type { User } from "./data.js";
 
 interface LoginBody
 {

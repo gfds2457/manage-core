@@ -1,5 +1,5 @@
-import { PERM } from "../../permission/codes";
-import type { MockItem } from "../../adapter";
+import { PERM } from "../../permission/codes.js";
+import type { MockItem } from "../../adapter.js";
 // 模拟SPU基础数据源
 const spuData = [
   {
@@ -675,7 +675,7 @@ export default [
     response: ( { body } ) =>
     {
       // body 是前端提交的SpuData，无id
-      const newSpu: SpuData = {
+      const newSpu: any = {
         ...body,
         id: Date.now(), // mock生成唯一id
       };

@@ -1,7 +1,7 @@
-import { PERM } from "../../permission/codes";
+import { PERM } from "../../permission/codes.js";
 // 原文件依赖 vite-plugin-mock 的 MockMethod 类型，迁移到独立后端后
 // 复用 adapter 中定义的 MockItem 接口（与 registerMocks 的入参类型一致）
-import type { MockItem } from "../../adapter";
+import type { MockItem } from "../../adapter.js";
 type MockMethod = MockItem;
 
 // 模拟10条品牌数据
